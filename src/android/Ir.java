@@ -1,4 +1,4 @@
-package com.imagenproactiva.irplugin;
+package ru.devredowl.cordova_ir_blaster;
 
 import org.apache.cordova.CordovaPlugin;
 
@@ -71,54 +71,3 @@ public class Ir extends CordovaPlugin {
 
     }
 }
-
-
-/*
- if (ACTION_TRANSMIT_IR_CODE.equals(action)) {
-
-                JSONObject args = jsonArgs.getJSONObject(0);
-                final Integer frequency = args.getInt("frequency");
-                String strSignal = args.getString("signal");
-                final int[] signal;
-
-                String[] items = strSignal.replaceAll("\\[", "").replaceAll("\\]", "").split(",");
-
-                signal = new int[items.length];
-
-                for (int i = 0; i < items.length; i++) {
-                    try {
-                        signal[i] = Integer.parseInt(items[i]);
-                    } catch (NumberFormatException nfe) {
-                    }
-                    ;
-                }
-
-
-                final Context context = this.cordova.getActivity().getApplicationContext();
-                this.cordova.getThreadPool().execute(new Runnable() {
-                    public void run() {
-                        callbackContext.success("0");
-                        ConsumerIrManager irService = (ConsumerIrManager) context.getSystemService(context.CONSUMER_IR_SERVICE);
-
-                        Log.d("transmit", "lets go");
-
-                        /*if (Build.VERSION.SDK_INT == ANDROID_KITKAT_SDK) {
-                            intlastIdx = Build.VERSION.RELEASE.lastIndexOf(".");
-                            int VERSION_MR = Integer.valueOf(Build.VERSION.RELEASE.substring(lastIdx + 1));
-                            if (VERSION_MR < 3) {
-                                // Before version of Android 4.4.2
-                                irService.transmit(frequency, signal);
-                            } else {
-                                // Later version of Android 4.4.3
-
-        irService.transmit(frequency, signal);
-        //   }
-        callbackContext.success("1");
-        }
-
-        });
- }else{
-                callbackContext.error("ivalid action");
-                return false;
-            }
- */
