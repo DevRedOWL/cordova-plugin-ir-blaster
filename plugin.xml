@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin id="com.imagenproactiva.irplugin" version="1.0.0" xmlns="http://www.phonegap.com/ns/plugins/1.0">
+    <name>Ir</name>
+    <description>Cordova IR Blaster Plugin</description>
+    <license>WTFPL</license>
+    <keywords>IR,infrared</keywords>
+
+    <js-module name="Ir" src="www/ir.js">
+        <clobbers target="window.ir" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="Ir">
+                <param name="android-package" value="ru.devredowl.cordovapluginirblaster" />
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/Ir.java" target-dir="src/cesarve77/ir/" />
+        <config-file parent="/*" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission.TRANSMIT_IR"
+                android:required="false" />
+            <uses-feature android:name="android.hardware.consumerir" />
+        </config-file>
+    </platform>
+</plugin>

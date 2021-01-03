@@ -1,0 +1,19 @@
+{
+  "name": "cordova-plugin-ir-blaster",
+  "version": "1.0.0",
+  "description": "Plugin for IR blaster",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devredowl/cordova-plugin-ir-blaster.git"
+  },
+  "author": "Daniel Varentsoff",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/devredowl/cordova-plugin-ir-blaster/issues"
+  },
+  "homepage": "https://github.com/devredowl/cordova-plugin-ir-blaster#readme"
+}
